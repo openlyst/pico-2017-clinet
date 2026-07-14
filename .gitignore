@@ -3,8 +3,5 @@
 *.apk
 *.keystore
 debug.keystore
-patched.apk
-patched_signed.apk
-screenshot.png
-screenshot_running.png
+*.idsig
 __pycache__/
