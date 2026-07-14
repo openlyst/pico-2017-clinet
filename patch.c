@@ -327,7 +327,10 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    char work_dir[] = "/tmp/picovr_patch_XXXXXX";
+    const char *tmpdir = getenv("TMPDIR");
+    if (!tmpdir) tmpdir = "/tmp";
+    char work_dir[PATH_MAX];
+    snprintf(work_dir, sizeof(work_dir), "%s/picovr_patch_XXXXXX", tmpdir);
     if (!mkdtemp(work_dir)) {
         fprintf(stderr, "Error: cannot create temp dir\n");
         return 1;
