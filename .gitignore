@@ -1,1 +1,10 @@
 /apk
+/work
+*.apk
+*.keystore
+debug.keystore
+patched.apk
+patched_signed.apk
+screenshot.png
+screenshot_running.png
+__pycache__/
